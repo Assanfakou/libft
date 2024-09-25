@@ -1,38 +1,28 @@
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	int i;
-	int j;
-	int s;
+	int	i;
+	int	l;
+	int	s;
 
+	i = 0;
 	if (*to_find == '\0')
+		return (str);
+	while (str[i])
 	{
-		return(str);
-	}
-	s = 0;
-	while (str[s])
-	{
-		j = s;
-		i = 0;
-		while (to_find[i] == str[j] && str[j] && to_find[i])
+		l = i;
+		s = 0;
+		while (to_find[s] == str[l] && to_find[s] && str[l])
 		{
-			i++;
-			j++;
+			s++;
+			l++;
 		}
-		if (to_find[i] == '\0')
+		if (to_find[s] == '\0')
 		{
-			return (&str[s]);
+			return (&str[i]);
 		}
-		s++;
+		i++;
 	}
 	return (0);
-}
-#include <string.h>
-int main ()
-{
-	char st[] = "alaloalijador";
-	char find[] = "ali";
-	printf("%s\n", ft_strstr(st, find));
-	printf("%s\n", strstr(st, find));
 }
