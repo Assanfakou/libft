@@ -14,5 +14,11 @@ int	ft_isprint(char *str);
 int	ft_strncmp(char *s1, char *s2,unsigned int n);
 int	ft_isascii(char *);
 char	*ft_strstr(char *str, char *to_find);
-char	*ft_strlcpy(char *dest, char *src,unsigned int n);
-char	*ft_strlcat(char *dest, char *src, unsigned int n);
+unsigned int	ft_strlcpy(char *dest, char *src,unsigned int n);
+char	*ft_strcpy(char *dest, char *);
+char	*ft_strcat(char *, char *);
+
+
+
+
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int n);
