@@ -1,6 +1,6 @@
-#include "libft.h"
-
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int n)
+	
+#include <stdio.h>
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -10,20 +10,27 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int n)
 	d_length = 0;
 	while (dest[d_length])
 		d_length++;
-
 	s_length = 0;
 	while (src[s_length])
 		s_length++;
-
-	d_length = j;
+	if (d_length >= size)
+		return (size + s_length);
+	j = d_length;
 	i = 0;
-	j = 0;
-	while (src[i] && j < (n - 1) && n != 0)
+	while (src[i] && j < (size - 1))
 	{
 		dest[j] = src[i];
 		i++;
 		j++;
 	}
-	dest[d_length + n] = '\0';
-	return (d_length + n);
+	dest[j] = '\0';
+	return (d_length + s_length);
+}
+#include <string.h>
+
+int main ()
+{
+	char st[] = "hello there";
+	char he[] = "hello";
+	printf("%d", ft_strlcat(he, st, 6));
 }
