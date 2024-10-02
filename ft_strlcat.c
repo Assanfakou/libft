@@ -1,4 +1,4 @@
-	
+#include <bsd/string.h>	
 #include <stdio.h>
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
@@ -13,8 +13,6 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	s_length = 0;
 	while (src[s_length])
 		s_length++;
-	if (d_length >= size)
-		return (size + s_length);
 	j = d_length;
 	i = 0;
 	while (src[i] && j < (size - 1))
@@ -24,6 +22,8 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		j++;
 	}
 	dest[j] = '\0';
+	if (d_length < size)
+		return (size + s_length);
 	return (d_length + s_length);
 }
 #include <string.h>
@@ -31,6 +31,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 int main ()
 {
 	char st[] = "hello there";
-	char he[] = "hello";
-	printf("%d", ft_strlcat(he, st, 6));
+	char he[20] = "hello ";
+	printf("%d\n", ft_strlcat(he, st, 17));
+	printf("%ld\n", strlcat(he, st, 17));
 }

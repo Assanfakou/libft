@@ -1,9 +1,8 @@
 #include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int n)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int	i;
-	unsigned int	s;
 
 	i = 0;
 	while (src[i] && i < n)
@@ -16,6 +15,5 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int n)
 		dest[i] = '\0';
 		i++;
 	}
-
 	return (dest);
 }

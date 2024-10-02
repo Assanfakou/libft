@@ -17,8 +17,11 @@ char	*ft_strstr(char *str, char *to_find);
 unsigned int	ft_strlcpy(char *dest, char *src,unsigned int n);
 char	*ft_strcpy(char *dest, char *);
 char	*ft_strcat(char *, char *);
+char	*ft_memset(char *s, int a, unsigned int n);
+char	*ft_strdup(char *str);
 
-
+char	*ft_memcpy(char *dest, char *src, unsigned int size);
+char	*ft_strchr(char *str, char c);
 
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int n);
