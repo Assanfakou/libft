@@ -14,6 +14,8 @@ char	*ft_strchr(char *str, char c)
 		else
 			i++;
 	}
+	if (c == '\0')
+		return (s);
 	return (0);
 }
 #include <stdio.h>
