@@ -1,4 +1,4 @@
-#include <bsd/string.h>	
+#include <string.h>	
 #include <stdio.h>
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
@@ -33,5 +33,5 @@ int main ()
 	char st[] = "hello there";
 	char he[20] = "hello ";
 	printf("%d\n", ft_strlcat(he, st, 17));
-	printf("%ld\n", strlcat(he, st, 17));
+//	printf("%ld\n", strlcat(he, st, 17));
 }

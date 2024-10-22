@@ -1,4 +1,4 @@
-#include "libft.h"
+//#include "libft.h"
 
 char	*ft_strcat(char *dest, char *src)
 {
@@ -7,7 +7,6 @@ char	*ft_strcat(char *dest, char *src)
 
 	i = 0;
 	while (dest[i])
-	{
 		i++;
 	j = 0;
 	while (src[j])
@@ -27,5 +26,5 @@ int main ()
 	char st[] = "hellohd;j";
         char de[] = "assan ";
 	printf("%s\n", ft_strcat(de, st));
-	printf("%s\n", strcat(de, st));
+//	printf("%s\n", strcat(de, st));
 }

@@ -1,5 +1,4 @@
 ## This is the first project that named libft,
-
 • memset
 				• bzero
 • memcpy
@@ -8,11 +7,17 @@
 				• memchr
 • memcmp
 				• strlen
-• strlcpy
+• strdup
+				• strcpy
+• strncpy
+				• strcat
+• strncat
 				• strlcat
 • strchr
 				• strrchr
-• strnstr
+• strstr
+				• strnstr
+• strcmp
 				• strncmp
 • atoi
 				• isalpha

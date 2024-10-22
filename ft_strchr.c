@@ -1,4 +1,4 @@
-#include "libft.h"
+//#include "libft.h"
 
 char	*ft_strchr(char *str, char c)
 {
@@ -15,12 +15,9 @@ char	*ft_strchr(char *str, char c)
 			i++;
 	}
 	if (c == '\0')
-		return (s);
+		return (str);
 	return (0);
 }
-#include <stdio.h>
-#include <string.h>
-
 int main ()
 {
 	char sr[] = "hello";

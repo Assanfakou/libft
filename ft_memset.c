@@ -1,59 +1,32 @@
+#include <stddef.h>
 #include "libft.h"
-
-char	*ft_memset(char *s, int a, unsigned int n)
+void	*f_memset(void *s, int a, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
+	char *_ptr;
 
+	_ptr = s;
 	i = 0;
 	while (i < n)
-	{
-		s[i] = a;
+	 {
+		_ptr[i] = a;
 		i++;
 	}
 	return (s);
 }
-#include <stdio.h>
+include <stdio.h>
+#include <string.h>
 
-/**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
- *
- * Return: Nothing.
- */
-void simple_print_buffer(char *buffer, unsigned int size)
+int main ()
 {
-        unsigned int i;
+        char st[17];
+        size_t     i;
 
+        ft_memset(st, 0, 10);
         i = 0;
-        while (i < size)
+        while (i < 17)
         {
-                if (i % 10)
-                {
-                        printf(" ");
-                }
-                if (!(i % 10) && i)
-                {
-                        printf("\n");
-                }
-                printf("0x%02x", buffer[i]);
+                printf("st[%ld] = %d\n", i, st[i]);
                 i++;
-        }
-        printf("\n");
-}
-
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    char buffer[98] = {0x022};
-
-    simple_print_buffer(buffer, 98);
-    ft_memset(buffer, 0x01, 95);
-    printf("-------------------------------------------------\n");
-    simple_print_buffer(buffer, 98);
-    return (0);
+        
 }
