@@ -1,18 +1,11 @@
 #include "libft.h"
 
-int	ft_isascii(char *str)
+int	ft_isascii(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
+	if (c >= '0' && str[i] <= '126')
 	{
-		if (str[i] >= 0 && str[i] <= 126)
-		{
-			i++;
-		}
-		else
-			return (0);
+		return (1);
 	}
-	return (1);
+	else
+		return (0);
 }

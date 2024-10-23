@@ -1,18 +1,11 @@
 #include "libft.h"
 
-int	ft_isalpha(char *str)
+int	ft_isalpha(int c)	
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
-		if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
-		{
-			i++;
-		}
-		else
-			return (0);
+		return (1);
 	}
-	return (1);
+	else
+		return (0);
 }

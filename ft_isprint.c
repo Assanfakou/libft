@@ -1,15 +1,11 @@
 #include "libft.h"
 
-int	ft_isprint(char *str)
+int	ft_isprint(int c)
 {
-	while (*str)
+	if (c >= 32 && c <= 126)
 	{
-		if (*str >= 32 && *str <= 126)
-		{
-			str++;
-		}
-		else
-			return (0);
+		return (1);
 	}
-	return (1);
+	else
+		return (0);
 }

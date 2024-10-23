@@ -1,18 +1,11 @@
 #include "libft.h"
 
-int	ft_isdigit(char *str)
+int	ft_isdigit(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
+	if (c >= '0' && c <= '9')
 	{
-		if (str[i] >= '0' && str[i] <= '9')
-		{
-			i++;
-		}
-		else
-			return (0);
+		return (1);
 	}
-	return (1);
+	else
+		return (0);
 }

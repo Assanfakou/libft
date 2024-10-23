@@ -28,5 +28,6 @@ int main ()
         {
                 printf("st[%ld] = %d\n", i, st[i]);
                 i++;
+		}
         
 }
