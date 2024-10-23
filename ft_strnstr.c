@@ -9,11 +9,11 @@ char	*ft_strnstr(char *big, char *little, unsigned int len)
 	if (*little == '\0')
 		return (big);
 	l = 0;
-	while (big[l] != '\0')
+	while (big[l] != '\0' && l < len)
 	{
 		i = l;
 		g = 0;
-		while (little[g] != '\0' && big[i] != '\0' && big[i] == little[g])
+		while (little[g] != '\0' && i <= len &&  big[i] != '\0' && big[i] == little[g])
 		{
 			g++;
 			i++;
@@ -31,8 +31,8 @@ char	*ft_strnstr(char *big, char *little, unsigned int len)
 
 int main ()
 {
-	char bi[] = "Gaz Bar Pets";
+	char bi[] = "Gaz Ba,ri Bar final";
 	char li[] = "Bar";
 
-	printf("%s\n", ft_strnstr(bi, li, 4));
+	printf("%s\n", ft_strnstr(bi, li, 20));
 }

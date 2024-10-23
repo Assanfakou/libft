@@ -21,8 +21,6 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
     }
     return (0);
 }
-#include <stdio.h>
-#include <string.h>
 
 // Macros for success and error messages
 #define ERROR_MSG(s) "X \033[1;41m"s"\033[0m"
