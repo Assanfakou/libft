@@ -25,6 +25,6 @@ size_t ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dest, const char *src, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char    *ft_strrchr(const char *s, int c);
-int ft_atoi(char *);
-char	*ft_strdup(char *str);
+int ft_atoi(const char *str);
+char	*ft_strdup(const char *str);
 #endif
