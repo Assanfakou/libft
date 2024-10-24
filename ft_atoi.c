@@ -2,14 +2,14 @@
 
 int ft_atoi(const char *str)
 {
-    int res;
-    int i;
-    int signe;
+    unsigned int res;
+    unsigned int i;
+    unsigned int signe;
 
     res = 0;
     signe = 1;
     i = 0;
-    while ((str[i] >= 9 && str[i] <= 14) || str[i] == 32)
+    while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
         i++;
     while (str[i] == '-' || str[i] == '+')
     {
