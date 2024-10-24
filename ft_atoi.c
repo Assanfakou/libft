@@ -2,22 +2,21 @@
 
 int ft_atoi(const char *str)
 {
-    unsigned int res;
-    unsigned int i;
-    unsigned int signe;
+    size_t res;
+    size_t i;
+    size_t signe;
 
     res = 0;
     signe = 1;
     i = 0;
     while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
         i++;
-    while (str[i] == '-' || str[i] == '+')
+    if (str[i] == '-' || str[i] == '+')
     {
         if (str[i] == '-')
         {
             signe *= -1;
         }
-        i++;
     }
     while (str[i] >= '0' && str[i] <= '9')
     {
@@ -28,5 +27,5 @@ int ft_atoi(const char *str)
 }
 int main ()
 {
-    printf("%d\n", ft_atoi("\v \n123"));
+    printf("%d\n", ft_atoi("120"));
 }

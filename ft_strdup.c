@@ -1,32 +1,30 @@
-//#include "libft.h"
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *str)
 {
 	char	*buffer;
-	int	i;
-
+	size_t	i;
+ 
 	i = 0;
 	while (str[i] != '\0')
 		i++;
-	buffer = malloc(sizeof(char * i + 1));
-	if (*buffer == '\0')
-	{
+	buffer = (char *)malloc(i + 1);
+	if (buffer == NULL)
+	{	
 		return (NULL);
 	}
 	i = 0;
-	while (str[i] && *buffer)
+	while (str[i])
 	{
 		buffer[i] = str[i];
 		i++;
 	}
-	buffer = '\0';
+	buffer[i] = '\0';
 	return (buffer);
 }
-
 int main ()
 {
 	char sti[] = "hello you";
-	printf("%s\n", ft_strdup(sti));
-//	printf("%s\n", strdup(sti));
+	printf("%s\n",ft_strdup(sti));
+	printf("%s\n", strdup(sti));
 }
