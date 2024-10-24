@@ -1,10 +1,10 @@
 #include "libft.h"
-#include <stddef.h>
-char	*ft_strnstr(char *big, char *little, unsigned int len)
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	unsigned int	i;
-	unsigned int	l;
-	unsigned int	g;
+	size_t	i;
+	size_t	l;
+	size_t	g;
 
 	if (*little == '\0')
 		return (big);
@@ -18,7 +18,7 @@ char	*ft_strnstr(char *big, char *little, unsigned int len)
 			g++;
 			i++;
 		}
-		if (little[g] == '\0')
+		if (little[g] == 0)
 		{
 			return (&big[l]);
 		}
@@ -26,9 +26,6 @@ char	*ft_strnstr(char *big, char *little, unsigned int len)
 	}
 	return (0);
 }
-#include <stdio.h>
-#include <string.h>
-
 int main ()
 {
 	char bi[] = "Gaz Ba,ri Bar final";

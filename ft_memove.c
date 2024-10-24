@@ -6,13 +6,10 @@
 /*   By: hfakou <hfakou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 22:25:20 by hfakou            #+#    #+#             */
-/*   Updated: 2024/10/23 00:54:40 by hfakou           ###   ########.fr       */
+/*   Updated: 2024/10/24 14:03:57 by hfakou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include "libft.h"
-#include <stdio.h>
 
 void    *ft_memmove(void *dest, const void *src, size_t n)
 {                                                                                                           

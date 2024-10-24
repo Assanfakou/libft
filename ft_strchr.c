@@ -1,27 +1,28 @@
-//#include "libft.h"
+#include "libft.h"
 
-char	*ft_strchr(char *str, char c)
+char	*ft_strchr(const char *str, int c)
 {
-	int	i;
+	unsigned int	i;
+	char ct;
 
+	ct = (char) c;
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] == c)
+		if (str[i] == ct)
 		{
-			return (&str[i]);
+			return ((char *) &str[i]);
 		}
-		else
-			i++;
+		i++;
 	}
-	if (c == '\0')
-		return (str);
-	return (0);
+	if (str[i] == ct)
+		return ((char *) &str[i]);
+	return (NULL);
 }
 int main ()
 {
 	char sr[] = "hello";
-	char s = 's';
+	char s = '\0';
 
 	printf("%s\n", ft_strchr(sr, s));
 	printf("%s\n", strchr(sr, s));

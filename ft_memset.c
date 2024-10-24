@@ -1,6 +1,5 @@
-#include <stddef.h>
 #include "libft.h"
-void	*f_memset(void *s, int a, size_t n)
+void	*ft_memset(void *s, int a, size_t n)
 {
 	size_t	i;
 	char *_ptr;
@@ -14,9 +13,6 @@ void	*f_memset(void *s, int a, size_t n)
 	}
 	return (s);
 }
-include <stdio.h>
-#include <string.h>
-
 int main ()
 {
         char st[17];

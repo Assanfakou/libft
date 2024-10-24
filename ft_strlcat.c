@@ -1,11 +1,11 @@
-#include <string.h>	
-#include <stdio.h>
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+#include "libft.h"
+
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	d_length;
-	unsigned int	s_length;
+	size_t	i;
+	size_t	j;
+	size_t	d_length;
+	size_t	s_length;
 
 	d_length = 0;
 	while (dest[d_length])
@@ -26,12 +26,11 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		return (size + s_length);
 	return (d_length + s_length);
 }
-#include <string.h>
 
 int main ()
 {
 	char st[] = "hello there";
 	char he[20] = "hello ";
-	printf("%d\n", ft_strlcat(he, st, 17));
+	printf("%ld\n", ft_strlcat(he, st, 17));
 //	printf("%ld\n", strlcat(he, st, 17));
 }
