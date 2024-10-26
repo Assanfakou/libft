@@ -2,21 +2,26 @@
 
 char    *ft_strrchr(const char *s, int c)
 {
-    unsigned char cc;
-    unsigned int i;
-    unsigned int backup;
+    size_t i;
+    size_t backup;
+    size_t j;
 
-    cc = (unsigned char) c;
     i = 0;
+    j = 0;
     while (s[i])
     {
-        if (s[i] == cc)
+        if (s[i] == (char) c)
         {
             backup = i;
+            j = i;
         }
         i++;
     }
-    return (void *) (&s[backup]);
+    if (s[i] == (char) c)
+        return (&s[i]);
+    else if (backup == j)
+        return (&s[backup]);
+    return (NULL);
 }
 int main ()
 {
