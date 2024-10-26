@@ -28,4 +28,5 @@ char    *ft_strrchr(const char *s, int c);
 int ft_atoi(const char *str);
 char	*ft_strdup(const char *str);
 void *ft_calloc(size_t nmemb, size_t size);
+char *substr(const char *s, size_t start, size_t len);
 #endif
